@@ -108,7 +108,7 @@ namespace TestIdentity
             {
                 return await connection.QueryFirstOrDefaultAsync<TestIdentityUser>(
                     "select * from TestUsers where NormalizedUserName = @normalizedUserName",
-                    new {id = normalizedUserName}
+                    new {normalizedUserName = normalizedUserName}
                 );
             }  
         }

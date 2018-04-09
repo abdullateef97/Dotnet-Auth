@@ -72,5 +72,13 @@ namespace TestIdentity.Controllers
             }
             return View();
         }
+        
+        
+        [HttpGet]
+        public IActionResult Success()
+        {
+            return View();
+        }
+        
     }
 }
