@@ -10,15 +10,20 @@
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="RegisterModel.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
         <e p="Startup.cs" t="Include" />
         <e p="TestIdentity.csproj" t="IncludeRecursive" />
+        <e p="TestIdentityUser.cs" t="Include" />
+        <e p="TestIdentityUserStore.cs" t="Include" />
         <e p="Views" t="Include">
           <e p="Home" t="Include">
             <e p="About.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="Register.cshtml" t="Include" />
+            <e p="Success.cshtml" t="Include" />
           </e>
           <e p="Shared" t="Include">
             <e p="Error.cshtml" t="Include" />

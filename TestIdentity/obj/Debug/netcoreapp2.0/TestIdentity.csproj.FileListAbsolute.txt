@@ -1,0 +1,10 @@
+/home/belle/RiderProjects/TestIdentity/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.deps.json
+/home/belle/RiderProjects/TestIdentity/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.runtimeconfig.json
+/home/belle/RiderProjects/TestIdentity/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.runtimeconfig.dev.json
+/home/belle/RiderProjects/TestIdentity/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.dll
+/home/belle/RiderProjects/TestIdentity/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.pdb
+/home/belle/RiderProjects/TestIdentity/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.csproj.CoreCompileInputs.cache
+/home/belle/RiderProjects/TestIdentity/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.AssemblyInfoInputs.cache
+/home/belle/RiderProjects/TestIdentity/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.AssemblyInfo.cs
+/home/belle/RiderProjects/TestIdentity/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.dll
+/home/belle/RiderProjects/TestIdentity/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.pdb
