@@ -36,23 +36,23 @@
         },
         "Microsoft.AspNetCore.Authentication.Cookies": {
           "target": "Package",
-          "version": "2.1.0-preview1-final"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.AspNetCore.Identity": {
           "target": "Package",
-          "version": "2.1.0-preview1-final"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
           "target": "Package",
-          "version": "2.1.0-preview1-final"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.EntityFrameworkCore": {
           "target": "Package",
-          "version": "2.0.0"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.EntityFrameworkCore.Design": {
           "target": "Package",
-          "version": "2.0.0"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.EntityFrameworkCore.SqlServer": {
           "target": "Package",
@@ -68,11 +68,11 @@
         },
         "Microsoft.Extensions.Identity.Core": {
           "target": "Package",
-          "version": "2.1.0-preview1-final"
+          "version": "2.1.0-preview2-final"
         },
         "Microsoft.Extensions.Identity.Stores": {
           "target": "Package",
-          "version": "2.1.0-preview1-final"
+          "version": "2.1.0-preview2-final"
         }
       },
       "imports": [

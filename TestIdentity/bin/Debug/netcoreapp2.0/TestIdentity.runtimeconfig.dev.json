@@ -2,7 +2,8 @@
   "runtimeOptions": {
     "additionalProbingPaths": [
       "/home/belle/.dotnet/store/|arch|/|tfm|",
-      "/home/belle/.nuget/packages"
+      "/home/belle/.nuget/packages",
+      "/usr/share/dotnet/sdk/NuGetFallbackFolder"
     ]
   }
 }

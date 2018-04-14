@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -9,6 +10,8 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Identity.Core;
+
 
 namespace TestIdentity
 {
@@ -26,14 +29,18 @@ namespace TestIdentity
         {
             services.AddMvc();
 
-            var connectionString = "Server=localhost;Database=TestIdentity;" +
+            var connectionString = "Server=localhost;Database=TestIdentity.IdentityUser;" +
                                    "Trusted_Connection=True;MultipleActiveResultSets=true;" +
                                    "User ID=SA;password=Abdlatol97;integrated security=false";
-            services.AddDbContext<IdentityDbContext>(opt => opt.UseSqlServer(connectionString));
+
+            var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
+            
+            services.AddDbContext<IdentityDbContext>(opt => opt.UseSqlServer(connectionString,
+                                                    sql => sql.MigrationsAssembly(migrationAssembly)));
             
             services.AddIdentityCore<IdentityUser>(options => {});
             services.AddScoped<IUserStore<IdentityUser>,
-                                    UserOnlyStore<IdentityUser, IdentityDbContext>>();
+                UserOnlyStore<IdentityUser, IdentityDbContext>>();
 
             services.AddAuthentication("cookies")
                 .AddCookie("cookies", option => option.LoginPath = "/Home/Login");

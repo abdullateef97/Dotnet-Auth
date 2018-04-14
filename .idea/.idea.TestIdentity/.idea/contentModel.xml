@@ -9,6 +9,11 @@
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="CustomIdentityUserstore.cs" t="Include" />
+        <e p="Migrations" t="Include">
+          <e p="20180414221337_Initial.Designer.cs" t="Include" />
+          <e p="20180414221337_Initial.cs" t="Include" />
+          <e p="IdentityDbContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
           <e p="LoginModel.cs" t="Include" />
@@ -18,6 +23,7 @@
         <e p="Startup.cs" t="Include" />
         <e p="TestIdentity.csproj" t="IncludeRecursive" />
         <e p="TestIdentityUser.cs" t="Include" />
+        <e p="TestIdentityUserDbContext.cs" t="Include" />
         <e p="TestIdentityUserStore.cs" t="Include" />
         <e p="Views" t="Include">
           <e p="Home" t="Include">
