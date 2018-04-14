@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Security.Claims;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using TestIdentity.Models;
@@ -12,9 +15,9 @@ namespace TestIdentity.Controllers
     public class HomeController : Controller
     {
 
-        private readonly UserManager<TestIdentityUser> _userManager;
+        private readonly UserManager<IdentityUser> _userManager;
 
-        public HomeController(UserManager<TestIdentityUser> userManager)
+        public HomeController(UserManager<IdentityUser> userManager)
         {
             _userManager = userManager;
         }
@@ -24,9 +27,10 @@ namespace TestIdentity.Controllers
             return View();
         }
 
+        [Authorize]
         public IActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            
 
             return View();
         }
@@ -59,7 +63,7 @@ namespace TestIdentity.Controllers
 
                 if (user == null)
                 {
-                    user = new TestIdentityUser()
+                    user = new IdentityUser()
                     {
                         Id = Guid.NewGuid().ToString(),
                         UserName = registerModel.UserName
@@ -78,6 +82,38 @@ namespace TestIdentity.Controllers
         public IActionResult Success()
         {
             return View();
+        }
+
+        [HttpGet]
+        public IActionResult Login()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("Login")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> LoginUser(LoginModel loginModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByNameAsync(loginModel.UserName);
+                if (user != null  && await _userManager.CheckPasswordAsync(user, loginModel.Password))
+                {
+                    var identity = new ClaimsIdentity("cookies");
+                    
+                    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
+                    identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
+
+                    await HttpContext.SignInAsync("cookies", new ClaimsPrincipal(identity));
+                   Console.WriteLine(1);
+                   return View("Index");
+                }
+                ModelState.AddModelError("", "Invalid UserName and Password");
+            }
+            
+
+            return View();
+
         }
         
     }

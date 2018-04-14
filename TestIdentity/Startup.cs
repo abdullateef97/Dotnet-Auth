@@ -5,6 +5,8 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -23,8 +25,18 @@ namespace TestIdentity
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            services.AddIdentityCore<TestIdentityUser>(options => {});
-            services.AddScoped<IUserStore<TestIdentityUser>, TestIdentityUserStore>();
+
+            var connectionString = "Server=localhost;Database=TestIdentity;" +
+                                   "Trusted_Connection=True;MultipleActiveResultSets=true;" +
+                                   "User ID=SA;password=Abdlatol97;integrated security=false";
+            services.AddDbContext<IdentityDbContext>(opt => opt.UseSqlServer(connectionString));
+            
+            services.AddIdentityCore<IdentityUser>(options => {});
+            services.AddScoped<IUserStore<IdentityUser>,
+                                    UserOnlyStore<IdentityUser, IdentityDbContext>>();
+
+            services.AddAuthentication("cookies")
+                .AddCookie("cookies", option => option.LoginPath = "/Home/Login");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -38,6 +50,8 @@ namespace TestIdentity
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseAuthentication();
 
             app.UseStaticFiles();
 

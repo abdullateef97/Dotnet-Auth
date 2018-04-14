@@ -8,8 +8,10 @@
         <e p="Controllers" t="Include">
           <e p="HomeController.cs" t="Include" />
         </e>
+        <e p="CustomIdentityUserstore.cs" t="Include" />
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
+          <e p="LoginModel.cs" t="Include" />
           <e p="RegisterModel.cs" t="Include" />
         </e>
         <e p="Program.cs" t="Include" />
@@ -22,6 +24,7 @@
             <e p="About.cshtml" t="Include" />
             <e p="Contact.cshtml" t="Include" />
             <e p="Index.cshtml" t="Include" />
+            <e p="Login.cshtml" t="Include" />
             <e p="Register.cshtml" t="Include" />
             <e p="Success.cshtml" t="Include" />
           </e>

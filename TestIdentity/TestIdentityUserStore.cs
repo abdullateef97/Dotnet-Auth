@@ -47,7 +47,7 @@ namespace TestIdentity
             {
                 await connection.ExecuteAsync(
                     "insert into TestUsers" +
-                    "([Id] , [UserName], [NormalizedUserName]" +
+                    "([Id] , [UserName], [NormalizedUserName]," +
                     "[PasswordHash])" +
                     "Values (@id,@userName,@normalizedUserName,@passwordHash)",
                     new
