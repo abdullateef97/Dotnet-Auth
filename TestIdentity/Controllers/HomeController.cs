@@ -15,9 +15,9 @@ namespace TestIdentity.Controllers
     public class HomeController : Controller
     {
 
-        private readonly UserManager<IdentityUser> _userManager;
+        private readonly UserManager<TestIdentityUser> _userManager;
 
-        public HomeController(UserManager<IdentityUser> userManager)
+        public HomeController(UserManager<TestIdentityUser> userManager)
         {
             _userManager = userManager;
         }
@@ -63,8 +63,9 @@ namespace TestIdentity.Controllers
 
                 if (user == null)
                 {
-                    user = new IdentityUser()
+                    user = new TestIdentityUser()
                     {
+                    
                         Id = Guid.NewGuid().ToString(),
                         UserName = registerModel.UserName
                     };

@@ -29,18 +29,18 @@ namespace TestIdentity
         {
             services.AddMvc();
 
-            var connectionString = "Server=localhost;Database=TestIdentity.IdentityUser;" +
+            var connectionString = "Server=localhost;Database=TestIdentity.ExtendIdentityUser;" +
                                    "Trusted_Connection=True;MultipleActiveResultSets=true;" +
                                    "User ID=SA;password=Abdlatol97;integrated security=false";
 
             var migrationAssembly = typeof(Startup).GetTypeInfo().Assembly.GetName().Name;
             
-            services.AddDbContext<IdentityDbContext>(opt => opt.UseSqlServer(connectionString,
+            services.AddDbContext<TestIdentityUserDbContext>(opt => opt.UseSqlServer(connectionString,
                                                     sql => sql.MigrationsAssembly(migrationAssembly)));
             
-            services.AddIdentityCore<IdentityUser>(options => {});
-            services.AddScoped<IUserStore<IdentityUser>,
-                UserOnlyStore<IdentityUser, IdentityDbContext>>();
+            services.AddIdentityCore<TestIdentityUser>(options => {});
+            services.AddScoped<IUserStore<TestIdentityUser>,
+                UserOnlyStore<TestIdentityUser, TestIdentityUserDbContext>>();
 
             services.AddAuthentication("cookies")
                 .AddCookie("cookies", option => option.LoginPath = "/Home/Login");

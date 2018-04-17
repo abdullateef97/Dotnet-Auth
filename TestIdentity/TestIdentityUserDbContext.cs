@@ -15,6 +15,13 @@ namespace TestIdentity
             base.OnModelCreating(builder);
 
             builder.Entity<TestIdentityUser>(user => user.HasIndex(x => x.Locale).IsUnique(false));
+
+            builder.Entity<Organization>(org =>
+            {
+                org.ToTable("Organizions");
+                org.HasKey(x => x.Id);
+                org.HasMany<TestIdentityUser>().WithOne().HasForeignKey(x => x.OrgId).IsRequired(false);
+            });
         }
     }
 }

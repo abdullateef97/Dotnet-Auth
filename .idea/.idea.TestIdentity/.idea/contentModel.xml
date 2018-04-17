@@ -10,9 +10,9 @@
         </e>
         <e p="CustomIdentityUserstore.cs" t="Include" />
         <e p="Migrations" t="Include">
-          <e p="20180414221337_Initial.Designer.cs" t="Include" />
-          <e p="20180414221337_Initial.cs" t="Include" />
-          <e p="IdentityDbContextModelSnapshot.cs" t="Include" />
+          <e p="20180414233623_extendIdentityUser.Designer.cs" t="Include" />
+          <e p="20180414233623_extendIdentityUser.cs" t="Include" />
+          <e p="TestIdentityUserDbContextModelSnapshot.cs" t="Include" />
         </e>
         <e p="Models" t="Include">
           <e p="ErrorViewModel.cs" t="Include" />
