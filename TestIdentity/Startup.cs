@@ -38,9 +38,13 @@ namespace TestIdentity
             services.AddDbContext<TestIdentityUserDbContext>(opt => opt.UseSqlServer(connectionString,
                                                     sql => sql.MigrationsAssembly(migrationAssembly)));
 
-            services.AddIdentity<TestIdentityUser, IdentityRole>(options => { })
+            services.AddIdentity<TestIdentityUser, IdentityRole>(options =>
+                {
+                    options.Tokens.EmailConfirmationTokenProvider = "emailconf";
+                })
                 .AddEntityFrameworkStores<TestIdentityUserDbContext>()
-                .AddDefaultTokenProviders();
+                .AddDefaultTokenProviders()
+                .AddTokenProvider<EmailConfTokenProvider<TestIdentityUser>>("emailconf");
             
             
             
@@ -51,9 +55,13 @@ namespace TestIdentity
 //            services.AddAuthentication("cookies")
 //                .AddCookie("cookies", option => option.LoginPath = "/Home/Login");
 
-
+            //configure lifespan of password reset
             services.Configure<DataProtectionTokenProviderOptions>(options =>
                 options.TokenLifespan = TimeSpan.FromHours(3));
+            
+            //configure lifespan of emailConfirmation
+            services.Configure<EmailConfTokenProviderOptions>(options =>
+                options.TokenLifespan = TimeSpan.FromDays(3));
             services.ConfigureApplicationCookie(option => option.LoginPath = "/Home/Login");
         }
 

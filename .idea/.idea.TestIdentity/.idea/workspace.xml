@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1f7036a4-11c8-44a2-baeb-1e5c0f3d2006" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.dll" afterPath="$PROJECT_DIR$/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.pdb" afterPath="$PROJECT_DIR$/TestIdentity/bin/Debug/netcoreapp2.0/TestIdentity.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.dll" afterPath="$PROJECT_DIR$/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.dll" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.pdb" afterPath="$PROJECT_DIR$/TestIdentity/obj/Debug/netcoreapp2.0/TestIdentity.pdb" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.idea.TestIdentity/.idea/contentModel.xml" afterPath="$PROJECT_DIR$/.idea/.idea.TestIdentity/.idea/contentModel.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/Controllers/HomeController.cs" afterPath="$PROJECT_DIR$/TestIdentity/Controllers/HomeController.cs" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/Views/Home/Register.cshtml" afterPath="$PROJECT_DIR$/TestIdentity/Views/Home/Register.cshtml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/EmailConfTokenProvider.cs" afterPath="$PROJECT_DIR$/TestIdentity/EmailConfTokenProvider.cs" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/TestIdentity/Startup.cs" afterPath="$PROJECT_DIR$/TestIdentity/Startup.cs" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -64,16 +59,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="EmailConfTokenProvider.cs" pinned="false" current-in-tab="true">
+      <file leaf-file-name="EmailConfTokenProvider.cs" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestIdentity/EmailConfTokenProvider.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+            <state relative-caret-position="162">
+              <caret line="9" column="124" lean-forward="false" selection-start-line="9" selection-start-column="124" selection-end-line="9" selection-end-column="124" />
               <folding>
-                <marker date="1524347463287" expanded="true" signature="6:115" ph="..." />
-                <marker date="1524347463287" expanded="true" signature="139:515" ph="{...}" />
-                <marker date="1524347463287" expanded="true" signature="246:513" ph="{...}" />
-                <marker date="1524347463287" expanded="true" signature="432:452" ph="{...}" />
+                <marker date="1524347581351" expanded="true" signature="6:115" ph="..." />
+                <marker date="1524347581351" expanded="true" signature="139:578" ph="{...}" />
+                <marker date="1524347581351" expanded="true" signature="246:470" ph="{...}" />
+                <marker date="1524347581351" expanded="true" signature="427:447" ph="{...}" />
+                <marker date="1524347581351" expanded="true" signature="555:576" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -106,7 +102,7 @@
         <entry file="file://$PROJECT_DIR$/TestIdentity/confirmationEmailLink.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="0">
-              <caret line="0" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="353" />
+              <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="353" />
               <folding />
             </state>
           </provider>
@@ -155,22 +151,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Startup.cs" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/TestIdentity/Startup.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="310">
-              <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
+            <state relative-caret-position="304">
+              <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
               <folding>
-                <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-                <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-                <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-                <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
+                <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+                <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+                <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+                <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -275,12 +272,12 @@
         <option value="$PROJECT_DIR$/TestIdentity/Views/Home/ResetPassword.cshtml" />
         <option value="$PROJECT_DIR$/TestIdentity/Models/ResetPasswordModel.cs" />
         <option value="$PROJECT_DIR$/TestIdentity/Views/Home/Login.cshtml" />
-        <option value="$PROJECT_DIR$/TestIdentity/Startup.cs" />
         <option value="$PROJECT_DIR$/TestIdentity/resetpassword.txt" />
         <option value="$PROJECT_DIR$/TestIdentity/Models/RegisterModel.cs" />
         <option value="$PROJECT_DIR$/TestIdentity/Controllers/HomeController.cs" />
         <option value="$PROJECT_DIR$/TestIdentity/Views/Home/Register.cshtml" />
         <option value="$PROJECT_DIR$/TestIdentity/EmailConfTokenProvider.cs" />
+        <option value="$PROJECT_DIR$/TestIdentity/Startup.cs" />
       </list>
     </option>
   </component>
@@ -423,7 +420,7 @@
       <workItem from="1524000069400" duration="365000" />
       <workItem from="1524082410621" duration="6007000" />
       <workItem from="1524259992915" duration="524000" />
-      <workItem from="1524343071602" duration="3238000" />
+      <workItem from="1524343071602" duration="3639000" />
     </task>
     <task id="LOCAL-00001" summary="gkhhkh">
       <created>1523688105342</created>
@@ -436,7 +433,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58989000" />
+    <option name="totallyTimeSpent" value="59390000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,9 +452,9 @@
       <window_info id="Errors In Solution" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5027494" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Unit Tests" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35303265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.35303265" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="NuGet" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.4972506" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33542812" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Build" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32970452" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -517,16 +514,17 @@
         <state relative-caret-position="540">
           <caret line="42" column="75" lean-forward="false" selection-start-line="42" selection-start-column="75" selection-end-line="42" selection-end-column="75" />
           <folding>
-            <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-            <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-            <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
+            <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+            <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+            <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -598,16 +596,17 @@
         <state relative-caret-position="558">
           <caret line="43" column="0" lean-forward="false" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
           <folding>
-            <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-            <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-            <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
+            <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+            <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+            <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -826,16 +825,17 @@
         <state relative-caret-position="648">
           <caret line="36" column="12" lean-forward="false" selection-start-line="36" selection-start-column="12" selection-end-line="36" selection-end-column="12" />
           <folding>
-            <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-            <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-            <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
+            <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+            <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+            <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -958,16 +958,17 @@
         <state relative-caret-position="180">
           <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
           <folding>
-            <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-            <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-            <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
+            <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+            <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+            <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1172,25 +1173,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestIdentity/Startup.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="310">
-          <caret line="40" column="42" lean-forward="false" selection-start-line="40" selection-start-column="42" selection-end-line="40" selection-end-column="42" />
-          <folding>
-            <marker date="1524086382131" expanded="false" signature="6:456" ph="..." />
-            <marker date="1524086382131" expanded="true" signature="481:3083" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="508:3081" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="567:630" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="853:2372" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="1844:2125" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
-            <marker date="1524086382131" expanded="true" signature="2560:3075" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2607:2684" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2701:2785" ph="{...}" />
-            <marker date="1524086382131" expanded="true" signature="2892:3063" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestIdentity/TestIdentityUserStore.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="162">
@@ -1292,7 +1274,7 @@
     <entry file="file://$PROJECT_DIR$/TestIdentity/confirmationEmailLink.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="30" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="353" />
+          <caret line="0" column="30" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="353" />
           <folding />
         </state>
       </provider>
@@ -1342,13 +1324,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/TestIdentity/EmailConfTokenProvider.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="13" column="45" lean-forward="false" selection-start-line="13" selection-start-column="45" selection-end-line="13" selection-end-column="45" />
+        <state relative-caret-position="162">
+          <caret line="9" column="124" lean-forward="false" selection-start-line="9" selection-start-column="124" selection-end-line="9" selection-end-column="124" />
           <folding>
-            <marker date="1524347463287" expanded="true" signature="6:115" ph="..." />
-            <marker date="1524347463287" expanded="true" signature="139:515" ph="{...}" />
-            <marker date="1524347463287" expanded="true" signature="246:513" ph="{...}" />
-            <marker date="1524347463287" expanded="true" signature="432:452" ph="{...}" />
+            <marker date="1524347581351" expanded="true" signature="6:115" ph="..." />
+            <marker date="1524347581351" expanded="true" signature="139:578" ph="{...}" />
+            <marker date="1524347581351" expanded="true" signature="246:470" ph="{...}" />
+            <marker date="1524347581351" expanded="true" signature="427:447" ph="{...}" />
+            <marker date="1524347581351" expanded="true" signature="555:576" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestIdentity/Startup.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="63" column="62" lean-forward="false" selection-start-line="63" selection-start-column="62" selection-end-line="63" selection-end-column="62" />
+          <folding>
+            <marker date="1524347864115" expanded="false" signature="6:456" ph="..." />
+            <marker date="1524347864115" expanded="true" signature="481:3538" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="508:3536" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="567:630" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="853:2827" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="1571:1688" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="2046:2379" ph="/* services.AddScoped&lt;IUserStore&lt;TestIdentityUser&gt;, ... */" />
+            <marker date="1524347864115" expanded="true" signature="3015:3530" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3062:3139" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3156:3240" ph="{...}" />
+            <marker date="1524347864115" expanded="true" signature="3347:3518" ph="{...}" />
           </folding>
         </state>
       </provider>

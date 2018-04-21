@@ -7,11 +7,15 @@ namespace TestIdentity
     public class EmailConfTokenProvider<TUser> : DataProtectorTokenProvider<TUser> where TUser : class 
 
     {
-        public EmailConfTokenProvider(IDataProtectionProvider dataProtectionProvider, IOptions<DataProtectionTokenProviderOptions> options) : base(dataProtectionProvider, options)
+        public EmailConfTokenProvider(IDataProtectionProvider dataProtectionProvider, IOptions<EmailConfTokenProviderOptions> options) : base(dataProtectionProvider, options)
         {
         }
         
        
     }
-    public EmailConfTokenProviderOptions : DataProte
+
+    public class EmailConfTokenProviderOptions : DataProtectionTokenProviderOptions
+    {
+        
+    }
 }
