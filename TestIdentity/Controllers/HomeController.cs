@@ -16,10 +16,13 @@ namespace TestIdentity.Controllers
     {
 
         private readonly UserManager<TestIdentityUser> _userManager;
+        private readonly IUserClaimsPrincipalFactory<TestIdentityUser> _claimsPrincipalFactory;
 
-        public HomeController(UserManager<TestIdentityUser> userManager)
+        public HomeController(UserManager<TestIdentityUser> userManager,
+            IUserClaimsPrincipalFactory<TestIdentityUser> claimsPrincipalFactory)
         {
             _userManager = userManager;
+            _claimsPrincipalFactory = claimsPrincipalFactory;
         }
         
         public IActionResult Index()
@@ -67,10 +70,14 @@ namespace TestIdentity.Controllers
                     {
                     
                         Id = Guid.NewGuid().ToString(),
-                        UserName = registerModel.UserName
+                        UserName = registerModel.UserName,
+                        Email = registerModel.Email
                     };
 
                     var result = await _userManager.CreateAsync(user, registerModel.Password);
+                    
+                    //confirm Email Address
+                    if(result)
                 }
 
                 return View("Success");
@@ -100,12 +107,18 @@ namespace TestIdentity.Controllers
                 var user = await _userManager.FindByNameAsync(loginModel.UserName);
                 if (user != null  && await _userManager.CheckPasswordAsync(user, loginModel.Password))
                 {
-                    var identity = new ClaimsIdentity("cookies");
-                    
-                    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
-                    identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
+//                    var identity = new ClaimsIdentity("Identity.Application");
+//                    
+//                    identity.AddClaim(new Claim(ClaimTypes.NameIdentifier, user.Id));
+//                    identity.AddClaim(new Claim(ClaimTypes.Name, user.UserName));
+                    if (!await _userManager.IsEmailConfirmedAsync(user))
+                    {
+                        ModelState.AddModelError("","Email is not confirmed");
+                        return View();
+                    }
+                    var principal = await _claimsPrincipalFactory.CreateAsync(user);
 
-                    await HttpContext.SignInAsync("cookies", new ClaimsPrincipal(identity));
+                    await HttpContext.SignInAsync("Identity.Application",principal);
                    Console.WriteLine(1);
                    return View("Index");
                 }
@@ -116,6 +129,67 @@ namespace TestIdentity.Controllers
             return View();
 
         }
-        
+
+        public IActionResult ForgotPassword()
+        {
+            return View();
+        }
+
+        [HttpPost, ActionName("ForgotPassword")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> forgotPassword(ForgotPasswordModel forgotPasswordModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(forgotPasswordModel.EmailAddress);
+                Console.WriteLine("use r is"+user);
+                if (user != null)
+                {
+                    var token = await _userManager.GeneratePasswordResetTokenAsync(user);
+
+                    var tokenUrl = Url.Action("ResetPassword", "Home",
+                        new {token = token, email = user.Email}, Request.Scheme);
+                    Console.WriteLine("token is"+tokenUrl);
+                    System.IO.File.WriteAllText("resetpassword.txt", tokenUrl);
+                }
+
+                return View("Success");
+            }
+            return View();
+        }
+
+        [HttpGet]
+        public IActionResult ResetPassword(string token, string email)
+        {
+            return View(new ResetPasswordModel {Token = token, Email = email});
+        }
+
+
+        [HttpPost, ActionName("ResetPassword")]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> resetPassword(ResetPasswordModel resetPasswordModel)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = await _userManager.FindByEmailAsync(resetPasswordModel.Email);
+                if (user != null)
+                {
+                    var result = await _userManager.ResetPasswordAsync(user, resetPasswordModel.Token,
+                        resetPasswordModel.Password);
+
+                    if (!result.Succeeded)
+                    {
+                        foreach (var error in result.Errors)
+                        {
+                            ModelState.AddModelError("",error.Description);
+                        }
+                        return View();
+                    }
+                    return View("Login");
+                }
+                ModelState.AddModelError("","Invalid Request");
+            }
+            return View();
+        }
     }
 }

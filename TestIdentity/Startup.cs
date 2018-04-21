@@ -37,13 +37,24 @@ namespace TestIdentity
             
             services.AddDbContext<TestIdentityUserDbContext>(opt => opt.UseSqlServer(connectionString,
                                                     sql => sql.MigrationsAssembly(migrationAssembly)));
-            
-            services.AddIdentityCore<TestIdentityUser>(options => {});
-            services.AddScoped<IUserStore<TestIdentityUser>,
-                UserOnlyStore<TestIdentityUser, TestIdentityUserDbContext>>();
 
-            services.AddAuthentication("cookies")
-                .AddCookie("cookies", option => option.LoginPath = "/Home/Login");
+            services.AddIdentity<TestIdentityUser, IdentityRole>(options => { })
+                .AddEntityFrameworkStores<TestIdentityUserDbContext>()
+                .AddDefaultTokenProviders();
+            
+            
+            
+            services.AddScoped<IUserClaimsPrincipalFactory<TestIdentityUser>, TestIdentityUSerClaimsFactory>();
+//            services.AddScoped<IUserStore<TestIdentityUser>,
+//                UserOnlyStore<TestIdentityUser, TestIdentityUserDbContext>>();
+
+//            services.AddAuthentication("cookies")
+//                .AddCookie("cookies", option => option.LoginPath = "/Home/Login");
+
+
+            services.Configure<DataProtectionTokenProviderOptions>(options =>
+                options.TokenLifespan = TimeSpan.FromHours(3));
+            services.ConfigureApplicationCookie(option => option.LoginPath = "/Home/Login");
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
