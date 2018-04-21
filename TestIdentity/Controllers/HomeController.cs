@@ -77,7 +77,13 @@ namespace TestIdentity.Controllers
                     var result = await _userManager.CreateAsync(user, registerModel.Password);
                     
                     //confirm Email Address
-                    if(result)
+                    if (result.Succeeded)
+                    {
+                        var token = await _userManager.GenerateEmailConfirmationTokenAsync(user);
+                        var confirmationEmailLink = Url.Action("ConfirmationEmail", "Home",
+                            new {token = token, email = user.Email}, Request.Scheme);
+                        System.IO.File.WriteAllText("confirmationEmailLink.txt",confirmationEmailLink);
+                    }
                 }
 
                 return View("Success");
@@ -190,6 +196,20 @@ namespace TestIdentity.Controllers
                 ModelState.AddModelError("","Invalid Request");
             }
             return View();
+        }
+
+        public async Task<IActionResult> ConfirmationEmail(string token, string email)
+        {
+            var user = await _userManager.FindByEmailAsync(email);
+            if (user != null)
+            {
+                var result = await _userManager.ConfirmEmailAsync(user, token);
+                if (result.Succeeded)
+                {
+                    return View("Success");
+                }
+            }
+            return View("Error");
         }
     }
 }

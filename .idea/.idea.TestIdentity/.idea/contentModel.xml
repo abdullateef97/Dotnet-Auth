@@ -9,6 +9,7 @@
           <e p="HomeController.cs" t="Include" />
         </e>
         <e p="CustomIdentityUserstore.cs" t="Include" />
+        <e p="EmailConfTokenProvider.cs" t="Include" />
         <e p="Migrations" t="Include">
           <e p="20180414233623_extendIdentityUser.Designer.cs" t="Include" />
           <e p="20180414233623_extendIdentityUser.cs" t="Include" />
@@ -52,6 +53,7 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="bower.json" t="Include" />
         <e p="bundleconfig.json" t="Include" />
+        <e p="confirmationEmailLink.txt" t="Include" />
         <e p="obj" t="ExcludeRecursive">
           <e p="Debug" t="Include">
             <e p="netcoreapp2.0" t="Include">
